@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+nav{
+    z-index: 5;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    width: 100vw;
+    margin: 0;
+    height: 50px;
+    justify-content: left;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+.container{
+    display: flex;
+    width: 500px;
+    height: 100%;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navHead{
+    display: flex;
+    height: 100%;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    color: #61DAFB;
+    font-size: 24px;
+    margin-left: 20px;
+}
+.navHead h1{
+    margin-bottom: 0;
+    font-size: 24px;
+    width: 350px;
+}
+.navLinks{
+    font-size: 20px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.navList{
+    list-style: none;
+    transition: transform 100ms;
+}
+
+.navList:hover{
+    transform: scale(1.1);
+}
+.navLinks:hover{
+    color: #61DAFB;
+}
+
+.navList::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 2px; /* Thickness of the line */
+    background-color: #61DAFB; /* Color of the line */
+    transition: width 0.4s ease-in-out, left 0.3s ease-in-out;
+}
+  
+.navList:hover::after {
+    width: calc(100% - 0px); /* Adjust as needed */
+    left: 0px; /* Adjust as needed */
+}
+
+
+
+.hamburger{
+    display: none;
+    margin-top: 5px;
+   
+}
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+ }
+ .toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+ }
+ .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+ }
+ .toggle{
+    margin-top: 10px;
+ }
+
+
+
+ /* media */
+@media screen and (max-width: 820px){
+    .hamburger{
+        display:block;
+        margin: 0;
+        height: 50px;
+        cursor: pointer;
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .hamburger .line1{
+        margin-top: 15px;
+    }
+    nav{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+    }
+    .navHead{
+        margin: 0;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-bottom: 10px;
+        gap: 15px;
+    }
+}

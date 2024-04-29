@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+
+.faq_body{
+    z-index: -1;
+}
+.faq_body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    background-image: url('assets/pmp.png');
+    background-size: cover;
+    opacity: 0.6; 
+}
+.faq_container{
+    z-index: 5;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    width: 80%;
+    gap: 30px;
+}
+
+.faq_que_ans{
+    border: 2px solid black;
+    background-color: rgb(217, 217, 215);
+}
+.faq_que{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    justify-content: space-between;
+}
+
+.faq_container label{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.faq_btn{
+    height: 35px;
+    border: none;
+    width: 37px;
+    background-image: url('assets/plus.png');
+    background-size: cover;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.faq_ans ul{
+    list-style-type: circle;
+}
+
+.hideans{
+    display: none;
+}

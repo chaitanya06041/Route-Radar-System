@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+.bus-founded{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85vw;
+    height: 60px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 500;
+    /* background-color: rgba(17, 80, 105, 0.133); */
+}
+.busTimes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.busInfo, .srcInfo, .dstInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wline{
+    height: 2px;
+    width: 80px;
+    background-color: black;
+    margin: 0 20px 0 20px;
+}
